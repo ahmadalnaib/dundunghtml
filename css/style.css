@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+/* custom color */
+
+:root {
+  --primary-color:#047aed;
+}
+
 /* base style */
 /* reset pages */
 * {
@@ -11,7 +17,7 @@ box-sizing: border-box;
 /* body */
 body{
   font-family: 'Lato', sans-serif;
-  color: #333;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -23,7 +29,7 @@ ul {
 /* links */
 a{
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 
 /* headings */
@@ -47,7 +53,7 @@ img {
 
 /* navbar */
 .navbar {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   color: #fff;
   height: 70px;
 }
@@ -88,3 +94,127 @@ display: flex;
 .navbar a:hover{
 border-bottom: 2px solid #fff;
 }
+
+/* logo */
+.fa-fingerprint{
+  color: #fff;
+}
+
+/* end navbar */
+/* -------------------------------------------- */
+/* showcase */
+.showcase {
+  height: 400px;
+  background: var(--primary-color);
+  color: #fff;
+  position: relative;
+  
+
+}
+
+/* showcase h1 */
+.showcase h1 {
+  font-size: 40px;
+}
+
+/* showcase p */
+.showcase p {
+  margin: 20px 0;
+}
+
+/* showcase grid */
+.showcase .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+
+}
+
+/* showcase grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* showcase card */
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* showcase form  and add overflow:vasbel on .showcase .grid*/
+.showcase-form {
+  position: relative; /* we add relative caz we want to add top proprety*/
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+/* form-controller */
+.showcase-form .form-control{
+  margin: 30px 0;
+}
+
+/* form input */
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+border: 0;
+border-bottom: 1px solid #b4becb;
+width: 100%;
+padding: 3px;
+font-size: 16px;
+}
+
+/* border inputs */
+.showcase-form input:focus{
+  outline: none;
+}
+
+/* showcase buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* showcase text button */
+.btn-outline{
+  background: transparent;
+  border: 1px #fff solid;
+}
+
+
+/* buttons hover */
+.btn:hover{
+  transform: scale(0.98);
+}
+
+/* the line of th showcase */
+/* .showcase::before,.showcase::after {
+content: '';
+position: absolute;
+height: 100px;
+bottom: -70px;
+right: 0;
+left: 0;
+background: var(--primary-color);
+clip-path: polygon(0 0, 100% 0%, 100% 12%, 0 100%);
+
+
+}   */
+/* endshowcase */
